@@ -1,0 +1,12 @@
+{
+  "channel": "starter",
+  "name": "Starter kit Lite, 1 neutral style (Paper)",
+  "tokens": {
+    "name": "Your Brand",
+    "handle": "@yourhandle"
+  },
+  "defaultTemplate": "series",
+  "templates": {
+    "series": "Paper (default), 7 cards: light background + one strong accent colour + boldest two-line headline + a screen filling half the card. Cover, why it matters, three item cards (one with switching screens), checklist, closing"
+  }
+}

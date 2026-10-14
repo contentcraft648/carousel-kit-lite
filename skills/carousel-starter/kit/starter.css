@@ -1,0 +1,114 @@
+/* Look of the carousel-starter default style (series). Colors, fonts and parts are defined only in this file.
+   To make it your own, start with the color variables in :root below. Change --accent alone and the whole style follows.
+   Baseline: light background, one deep accent color, a two-line boldest headline, one line of description, a screen taking half the card, and a footer in the same place (pill label, progress line, swipe button). */
+
+:root {
+  /* ▼▼ Make this yours ▼▼ */
+  --accent: #2447f9;          /* Accent color. Pick a deep color that white text stays readable on (pale pastels lack punch) */
+  /* ▲▲ End ▲▲ */
+
+  --accent-wash: color-mix(in srgb, var(--accent) 12%, #ffffff);   /* Accent diluted to a light wash (filled areas inside the screen) */
+  --ink: #131417;             /* Text, dark screens */
+  --ink-soft: #5d6068;        /* Description text */
+  --ink-faint: #9b9da3;       /* Header, small labels */
+  --paper: #f2f0eb;           /* Card background */
+  --panel: #ffffff;           /* Screen background */
+  --line: #dcd9d1;            /* Thin lines */
+  --pad: 72px;                /* Card inner padding (keep 60px or more left and right) */
+  --radius: 20px;             /* Screen corner radius */
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;     /* Terminal screen font (uses what is on the computer) */
+}
+
+body { font-family: "Pretendard", sans-serif; color: var(--ink); }
+.card { background: var(--paper); padding: var(--pad); display: flex; flex-direction: column; }
+
+/* Header: channel name (left) and card number (right). Same place on every card */
+.bar { display: flex; justify-content: space-between; align-items: center; font: 600 26px/1 "Pretendard"; color: var(--ink-faint); }
+
+/* Pill label: which item this card is */
+.pill { align-self: flex-start; margin-top: 44px; padding: 9px 20px 10px; border: 3px solid var(--accent); border-radius: 999px; font: 800 26px/1 "Pretendard"; color: var(--accent); letter-spacing: 0.02em; }
+
+/* Headline: two lines, boldest weight. Only one line or one word in the accent color */
+h1, h2 { font-weight: 900; letter-spacing: calc(-0.05em * var(--track)); }
+h2 { margin-top: 30px; font-size: 96px; line-height: 1.13; }
+h2 em, h1 em { color: var(--accent); }
+
+/* Description: one line */
+.desc { margin-top: 26px; font: 500 38px/1.45 "Pretendard"; color: var(--ink-soft); letter-spacing: calc(-0.02em * var(--track)); }
+.desc b { color: var(--ink); font-weight: 700; }
+
+/* ── Screen: takes all remaining height. The visual anchor of this style ── */
+.shot { margin-top: 40px; flex: 1; min-height: 0; display: flex; flex-direction: column; border-radius: var(--radius); background: var(--panel); border: 2px solid var(--line); overflow: hidden; box-shadow: 0 26px 50px -30px rgba(19, 20, 23, 0.35); }
+.shot .chrome { flex: none; display: flex; align-items: center; gap: 10px; height: 68px; padding: 0 28px; border-bottom: 2px solid var(--line); font: 600 25px/1 "Pretendard"; color: var(--ink-faint); }
+.shot .chrome b { width: 14px; height: 14px; border-radius: 50%; background: var(--line); }
+.shot .chrome span { margin-left: 12px; }
+.shot .body { flex: 1; min-height: 0; padding: 34px 38px; display: flex; flex-direction: column; justify-content: center; }
+.shot.dark { background: var(--ink); border-color: var(--ink); color: #ffffff; }
+.shot.dark .chrome { border-bottom-color: rgba(255, 255, 255, 0.12); color: rgba(255, 255, 255, 0.5); }
+.shot.dark .chrome b { background: rgba(255, 255, 255, 0.22); }
+
+/* Inside the screen: log list */
+.raw { list-style: none; font: 500 36px/1.42 "Pretendard"; letter-spacing: calc(-0.02em * var(--track)); }
+.raw li { padding: 18px 0; border-top: 2px solid var(--line); }
+.raw li:first-child { border-top: 0; padding-top: 0; }
+.raw li:last-child { padding-bottom: 0; }
+/* Inside the screen: labeled rows (input, task, expected output) */
+.rows { display: grid; }
+.rows > div { display: grid; grid-template-columns: 190px 1fr; gap: 20px; align-items: baseline; padding: 30px 0; border-top: 2px solid var(--line); }
+.rows > div:first-child { border-top: 0; padding-top: 0; }
+.rows > div:last-child { padding-bottom: 0; }
+.rows b { font: 800 34px/1.3 "Pretendard"; color: var(--accent); }
+.rows span { font: 600 40px/1.4 "Pretendard"; letter-spacing: calc(-0.025em * var(--track)); }
+.shot.dark .rows > div { border-top-color: rgba(255, 255, 255, 0.14); }
+.shot.dark .rows b { color: color-mix(in srgb, var(--accent) 45%, #ffffff); }
+/* Inside the screen: chat bubbles (the request sent and the reply) */
+.talk { display: flex; flex-direction: column; gap: 24px; }
+.talk .me { align-self: flex-end; max-width: 86%; background: var(--accent); color: #ffffff; border-radius: 30px 30px 8px 30px; padding: 24px 32px; font: 700 40px/1.4 "Pretendard"; letter-spacing: calc(-0.025em * var(--track)); }
+.talk .ai { align-self: flex-start; max-width: 92%; background: #eeece7; border-radius: 30px 30px 30px 8px; padding: 26px 32px; font: 500 34px/1.55 "Pretendard"; color: var(--ink-soft); letter-spacing: calc(-0.02em * var(--track)); }
+/* Inside the screen: prompt text. The parts to be replaced are highlighted */
+.ask { font: 600 46px/1.6 "Pretendard"; letter-spacing: calc(-0.03em * var(--track)); }
+.ask .slot { color: var(--accent); background: var(--accent-wash); border-radius: 8px; padding: 0 10px; margin: 0 -2px; font-weight: 800; }
+/* Inside the screen: the reply (table) */
+.out { border-collapse: collapse; width: 100%; font: 500 36px/1.5 "Pretendard"; letter-spacing: calc(-0.02em * var(--track)); }
+.out th { text-align: left; vertical-align: top; width: 170px; padding: 24px 24px 24px 0; color: var(--accent); font-weight: 800; }
+.out td { padding: 24px 0; border-bottom: 2px solid var(--line); }
+.out tr:first-child th, .out tr:first-child td { padding-top: 0; }
+.out tr:last-child td { border-bottom: 0; padding-bottom: 0; }
+.out tr:last-child th { padding-bottom: 0; }
+/* Inside the screen: checklist row */
+.checks { list-style: none; display: grid; grid-auto-rows: 1fr; flex: 1; }
+.checks li { display: flex; align-items: center; gap: 28px; border-top: 2px solid var(--line); font: 700 42px/1.35 "Pretendard"; letter-spacing: calc(-0.03em * var(--track)); }
+.checks li:first-child { border-top: 0; }
+.checks i { flex: none; width: 54px; height: 54px; border-radius: 14px; background: var(--accent); color: #ffffff; display: grid; place-items: center; }
+.checks svg { width: 32px; height: 32px; }
+.shot .body.fill { justify-content: stretch; padding-top: 10px; padding-bottom: 10px; }
+
+/* Flipping screens (data-slides): in video the screens change in turn. The still PNG shows the first screen */
+.screens { position: relative; flex: 1; min-height: 0; }
+.screens > .screen { position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--panel); opacity: 0; }
+.screens > .screen:first-child { opacity: 1; }
+
+/* Dot list: short words laid out in two columns below the screen */
+.dots { list-style: none; margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; font: 600 32px/1.3 "Pretendard"; letter-spacing: calc(-0.02em * var(--track)); }
+.dots li { position: relative; padding: 18px 0 18px 28px; border-bottom: 2px solid var(--line); }
+.dots li::before { content: ""; position: absolute; left: 2px; top: 31px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+
+/* Footer: progress line (left) and swipe button (right). Same place on every card */
+.end { margin-top: 36px; display: flex; justify-content: space-between; align-items: center; min-height: 60px; }
+.prog { display: flex; gap: 10px; }
+.prog i { width: 40px; height: 6px; border-radius: 3px; background: var(--line); }
+.prog i.on { background: var(--accent); }
+.swipe { padding: 16px 26px 17px; border-radius: 999px; background: var(--ink); color: #ffffff; font: 800 26px/1 "Pretendard"; }
+.end .handle { font: 600 28px/1 "Pretendard"; color: var(--ink-faint); }
+
+/* ── Cover: accent-color background. The headline takes half the card; a number or key word is flipped into a white box ── */
+.card.cover { background: var(--accent); color: #ffffff; }
+.card.cover .bar { color: rgba(255, 255, 255, 0.72); }
+.card.cover h1 { margin-top: 56px; font-size: 104px; line-height: 1.16; }
+.card.cover h1 mark { display: inline-block; background: #ffffff; color: var(--accent); padding: 0 18px 4px; margin-left: -6px; border-radius: 12px; }
+.card.cover .desc { color: rgba(255, 255, 255, 0.88); margin-top: 32px; }
+.card.cover .desc b { color: #ffffff; }
+.card.cover .shot { border: 0; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.55); }
+.card.cover .prog i { background: rgba(255, 255, 255, 0.34); }
+.card.cover .prog i.on { background: #ffffff; }
+.card.cover .swipe { background: #ffffff; color: var(--accent); }

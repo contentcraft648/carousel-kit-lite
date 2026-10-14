@@ -1,0 +1,33 @@
+/* Minimal base shared by all styles. Canvas size (--cw, --ch) is injected by render.cjs from config.json. */
+
+/* Tightening of display type. Headline letter-spacing in the kits is multiplied by --track: Latin text needs about half of the tight tracking that Korean headlines use. */
+:root { --track: 0.5; }
+:root:lang(ko), :root:lang(ja), :root:lang(zh) { --track: 1; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background: #2a2a2e; }
+
+body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  font-kerning: normal;
+}
+
+section.card {
+  position: relative;
+  width: var(--cw, 1080px);
+  height: var(--ch, 1350px);
+  overflow: hidden;
+  margin: 0 auto 24px;
+}
+
+section.card svg { display: block; }
+
+em, i { font-style: normal; }
+
+/* Line breaking: balance line lengths in headings, avoid one- or two-character last lines in body text, and never break mid-word (word-break: keep-all). */
+.card h1, .card h2, .card h3 { text-wrap: balance; }
+.card p, .card li, .card td, .card small, .card span, .card div { text-wrap: pretty; }

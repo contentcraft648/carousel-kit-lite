@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-channel="starter">
+<head>
+<meta charset="utf-8">
+<title>Sample series: Brief your designer with 3 things</title>
+<link rel="stylesheet" href="/__engine/fonts.css">
+<link rel="stylesheet" href="/__engine/base.css">
+<link rel="stylesheet" href="/__kit/starter/starter.css">
+<!--
+  Sample series, 7 cards. The copy is filled in for an example topic: "3 things to send a freelance designer before they start".
+  For a new set, replace all of it to fit your topic (write the card plan in plan.md first).
+  One card: header bar -> pill label -> two-line headline (only one line in the accent colour) -> one-line description -> screen (fills the remaining height) -> dot list (optional) -> progress bar and swipe button.
+  - Channel name and handle are data-token slots. Edit their values in the tokens of skills/carousel-starter/kit/kit.json.
+  - Card numbers are filled in automatically by the data-page slots.
+  - The progress bar (.prog) has one <i> per card, with class="on" up to the current card. If you add or remove a card, fix the progress bar on every card.
+  - Put real material in the screens: a real note, a prompt, a result. Label sample material "example". Never invent statistics, testimonials or results.
+  - Do not leave a screen nearly empty with one or two lines. Keep the description to one line and put anything else in the caption.
+-->
+</head>
+<body>
+
+<!-- 1. Cover: accent-colour background. Headline takes the top half, a screen the bottom half -->
+<section class="card cover" data-name="cover">
+  <div class="bar" data-motion="none"><span data-token="name"></span><span data-page></span></div>
+  <h1>Brief your<br>designer with<br><mark>3 things</mark></h1>
+  <p class="desc">Before the long email, write these three lines.</p>
+  <div class="shot dark">
+    <div class="chrome"><b></b><b></b><b></b><span>Three lines to write first · example</span></div>
+    <div class="body"><div class="rows">
+      <div><b>Goal</b><span>Rebrand a dog-walking shop</span></div>
+      <div><b>Who for</b><span>Busy dog owners on Instagram</span></div>
+      <div><b>Limits</b><span>Final files by March 14, $600</span></div>
+    </div></div>
+  </div>
+  <div class="end" data-motion="none"><div class="prog"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 2. Why it matters: a common request and the answer it gets, shown on screen -->
+<section class="card" data-name="why">
+  <div class="bar" data-motion="none"><span data-token="name"></span><span data-page></span></div>
+  <span class="pill">Why it matters</span>
+  <h2>Vague brief,<br><em>vague</em> results.</h2>
+  <p class="desc">Not wrong, just not usable yet.</p>
+  <div class="shot">
+    <div class="chrome"><b></b><b></b><b></b><span>What many designers receive · example</span></div>
+    <div class="body"><div class="talk">
+      <div class="me">hey need a logo asap</div>
+      <div class="ai">Sure! Could you tell me a bit more? What does the business do, who is it for, which colours and style, what sizes, when do you need it, and what is your budget? Also, do you have any examples you like? Once I know that I can…</div>
+    </div></div>
+  </div>
+  <ul class="dots"><li>Five questions before any work starts</li><li>Days lost to back-and-forth</li></ul>
+  <div class="end" data-motion="none"><div class="prog"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 3. One item = one card: number (pill) -> name (big) -> one line -> big screen -> dot list. Copy this card to add more items -->
+<section class="card" data-name="item-1">
+  <div class="bar" data-motion="none"><span data-token="name"></span><span data-page></span></div>
+  <span class="pill">01 / 03</span>
+  <h2>Goal:<br><em>one sentence</em></h2>
+  <p class="desc">Say what it must do, not how it should look.</p>
+  <div class="shot">
+    <div class="chrome"><b></b><b></b><b></b><span>Goal · example</span></div>
+    <div class="body"><ul class="raw">
+      <li>Rebrand Paws &amp; Co, a dog-walking shop.</li>
+      <li>Must look friendly on a van and on Instagram.</li>
+      <li>Used on: van, website and social avatars.<br>Not needed: packaging (later).</li>
+      <li>Tone: warm, local, a bit playful.</li>
+    </ul></div>
+  </div>
+  <ul class="dots"><li>What it must do</li><li>Where it will be used</li></ul>
+  <div class="end" data-motion="none"><div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 4. One item = one card -->
+<section class="card" data-name="item-2">
+  <div class="bar" data-motion="none"><span data-token="name"></span><span data-page></span></div>
+  <span class="pill">02 / 03</span>
+  <h2>Who for:<br><em>real customers</em></h2>
+  <p class="desc">Name the people who will actually see it.</p>
+  <div class="shot">
+    <div class="chrome"><b></b><b></b><b></b><span>Audience · example</span></div>
+    <div class="body"><div class="ask">Our customers are<br><span class="slot">busy dog owners</span><br>aged 30 to 50 who<br>find us on <span class="slot">Instagram</span></div></div>
+  </div>
+  <ul class="dots"><li>Who they are</li><li>Where they find you</li></ul>
+  <div class="end" data-motion="none"><div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 5. Switching screen (data-slides): only the first screen shows in the PNG. The full kit turns the others into video. Copy .screen to add more. Text and frame stay fixed with data-motion="none" -->
+<section class="card" data-name="item-3">
+  <div class="bar" data-motion="none"><span data-token="name"></span><span data-page></span></div>
+  <span class="pill" data-motion="none">03 / 03</span>
+  <h2 data-motion="none">Limits:<br><em>date and budget</em></h2>
+  <p class="desc" data-motion="none">Say the number. A designer can plan around it.</p>
+  <div class="shot" data-motion="none">
+    <div class="screens" data-slides="2.4">
+      <div class="screen">
+        <div class="chrome"><b></b><b></b><b></b><span>Limits · example</span></div>
+        <div class="body"><table class="out">
+          <tr><th>Date</th><td>Final files by March 14</td></tr>
+          <tr><th>Money</th><td>$600 in total<br>Two rounds of changes<br>Extra rounds billed hourly</td></tr>
+          <tr><th>Files</th><td>SVG and PNG, full ownership</td></tr>
+        </table></div>
+      </div>
+      <div class="screen">
+        <div class="chrome"><b></b><b></b><b></b><span>One more line to add · example</span></div>
+        <div class="body"><div class="ask">If you are unsure<br>about a limit, write<br><span class="slot">flexible</span> and say why.</div></div>
+      </div>
+    </div>
+  </div>
+  <ul class="dots" data-motion="none"><li>Date, money, files in one place</li><li>Unsure? Write "flexible"</li></ul>
+  <div class="end" data-motion="none"><div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 6. Checklist: a card people save and reuse -->
+<section class="card" data-name="checklist">
+  <div class="bar" data-motion="none"><span data-token="name"></span><span data-page></span></div>
+  <span class="pill">Save this</span>
+  <h2>Four checks<br><em>before you send</em></h2>
+  <p class="desc">If one is empty, fill it first.</p>
+  <div class="shot">
+    <div class="body fill"><ul class="checks">
+      <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></i>I wrote the goal in one sentence</li>
+      <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></i>I named who it is for</li>
+      <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></i>I gave a date and a budget</li>
+      <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></i>I attached two examples I like</li>
+    </ul></div>
+  </div>
+  <div class="end" data-motion="none"><div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 7. Closing: one thing for the reader to do. The screen holds a template they can copy as is -->
+<section class="card" data-name="closing">
+  <div class="bar" data-motion="none"><span data-token="name"></span><span data-page></span></div>
+  <span class="pill">Take it</span>
+  <h2>Save it,<br><em>swap the blanks.</em></h2>
+  <p class="desc">Works for a logo, a website or a flyer.</p>
+  <div class="shot dark">
+    <div class="chrome"><b></b><b></b><b></b><span>Three-line template</span></div>
+    <div class="body"><div class="rows">
+      <div><b>Goal</b><span>(what it must do)</span></div>
+      <div><b>Who for</b><span>(your customers)</span></div>
+      <div><b>Limits</b><span>(date, money, files)</span></div>
+    </div></div>
+  </div>
+  <div class="end" data-motion="none"><div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><span class="handle" data-token="handle"></span></div>
+</section>
+
+</body>
+</html>

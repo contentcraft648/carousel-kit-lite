@@ -1,0 +1,79 @@
+{
+  "canvas": {
+    "width": 1080,
+    "height": 1350
+  },
+  "cardsFile": "cards.html",
+  "cardSelector": "section.card",
+  "cardNameAttribute": "data-name",
+  "channelAttribute": "data-channel",
+  "tokenAttribute": "data-token",
+  "bleedAttribute": "data-bleed",
+  "chromePathEnv": "CHROME_PATH",
+  "chromeArgs": [
+    "--disable-gpu"
+  ],
+  "routes": {
+    "engine": "/__engine/",
+    "kit": "/__kit/"
+  },
+  "engine": {
+    "sharedDir": "shared",
+    "templatesDir": "templates",
+    "blankTemplate": "blank"
+  },
+  "kit": {
+    "skillPrefix": "carousel-",
+    "dir": "kit",
+    "manifest": "kit.json",
+    "templatesDir": "templates"
+  },
+  "output": {
+    "cards": "out",
+    "preview": "preview",
+    "phone": "phone",
+    "sheet": "sheet.png"
+  },
+  "preview": {
+    "phoneWidth": 390,
+    "sheetColumns": 5,
+    "sheetGap": 20,
+    "sheetPadding": 28,
+    "sheetBackground": "#17171a"
+  },
+  "checks": {
+    "minFontPx": 24,
+    "emptyBandRatio": 0.2,
+    "lineBreak": {
+      "orphanMaxChars": 3,
+      "tailMinRatio": 0.45,
+      "latin": {
+        "orphanMaxChars": 8,
+        "tailMinRatio": 0.25
+      },
+      "blockSelector": "h1, h2, h3, p, li, b, span, small, td, th, div"
+    }
+  },
+  "pageAttribute": "data-page",
+  "pagePattern": "{n} / {t}",
+  "chromePathCandidates": [
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Chromium.app/Contents/MacOS/Chromium",
+    "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+    "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+    "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "/usr/bin/google-chrome",
+    "/usr/bin/google-chrome-stable",
+    "/usr/bin/chromium",
+    "/usr/bin/chromium-browser"
+  ],
+  "chromeIsolation": {
+    "darwinArgs": [
+      "--use-mock-keychain"
+    ],
+    "linuxArgs": [
+      "--password-store=basic"
+    ]
+  }
+}

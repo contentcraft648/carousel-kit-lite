@@ -1,0 +1,10 @@
+{
+  "name": "carousel-kit-lite",
+  "version": "1.0.0",
+  "description": "Turn one sentence into an Instagram carousel (1080x1350 PNGs). One style, a render engine, and a self-check for overflow, small text and empty areas.",
+  "author": {
+    "name": "contentcraft"
+  },
+  "homepage": "https://contentcraft648.gumroad.com/l/dzrpwk",
+  "keywords": ["instagram", "carousel", "slides", "design", "skill"]
+}

@@ -1,0 +1,13 @@
+/* Font provided by the carousel engine: Pretendard (SIL Open Font License 1.1; license text in fonts/OFL-Pretendard.txt).
+   Font names are defined only in this file; no remote fonts are used.
+   To use another font: put the font file in shared/fonts/ (check its redistribution terms yourself), add a line like the one below,
+   then refer to it by font-family name in the channel kit CSS.
+   e.g. @font-face { font-family: "MyFont"; font-weight: 400; src: url("fonts/MyFont-Regular.ttf"); } */
+
+@font-face { font-family: "Pretendard"; font-weight: 400; src: url("fonts/Pretendard-Regular.otf"); }
+@font-face { font-family: "Pretendard"; font-weight: 500; src: url("fonts/Pretendard-Medium.otf"); }
+@font-face { font-family: "Pretendard"; font-weight: 600; src: url("fonts/Pretendard-SemiBold.otf"); }
+@font-face { font-family: "Pretendard"; font-weight: 700; src: url("fonts/Pretendard-Bold.otf"); }
+@font-face { font-family: "Pretendard"; font-weight: 800; src: url("fonts/Pretendard-ExtraBold.otf"); }
+@font-face { font-family: "Pretendard"; font-weight: 900; src: url("fonts/Pretendard-Black.otf"); }
+

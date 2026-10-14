@@ -1,0 +1,7 @@
+{
+  "name": "carousel-engine-scripts",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Tool that renders carousel cards.html to PNG with local Chrome",
+  "dependencies": { "playwright-core": "^1.50.0" }
+}

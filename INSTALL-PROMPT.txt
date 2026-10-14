@@ -1,0 +1,22 @@
+This folder (carousel-kit-lite-v1) contains Carousel Kit Lite, which makes Instagram carousels (PNG images) from a topic. Lite has one style (Paper) and no video. Install and test it in the order below. After each step, tell me the result in a line or two. If you get blocked, stop and tell me why and how to fix it.
+
+1. Check the environment: node (18 or newer), npm, and Chrome (or Edge / Chromium). If something is missing, tell me how to install it, and install it if I say yes.
+   - If Chrome is not in a default location, tell me how to set the CHROME_PATH environment variable to the full path of the executable.
+
+2. Copy the two folders under this folder's skills (carousel-engine, carousel-starter) into .claude/skills/ in my home folder (on Windows, %USERPROFILE%\.claude\skills). If I am using Codex, copy them to .codex/skills/ instead (on Windows, %USERPROFILE%\.codex\skills). If a folder with the same name already exists, ask me before overwriting.
+
+3. In the copied carousel-engine/scripts folder, run npm install.
+
+4. Make a test set. Inside this folder, create one named test-set from the starter sample:
+   node <skills>/carousel-engine/scripts/new-set.cjs --dir test-set --channel starter
+   Then render it with render.cjs, and check that the auto-check reports no warnings ("Auto-check: no warnings") and that the out folder has 7 PNGs.
+   Also open preview/sheet.png and check that all 7 slides look right.
+
+5. When you are done, say "Installation complete" and tell me:
+   - Where the two skills were copied
+   - The test results (number of warnings and PNGs)
+   - What I can now say to Claude Code: "Make a carousel about (my topic)."
+   - That Lite has one style (Paper) and makes PNGs only. The full Carousel Kit has 7 styles and one MP4 per slide: https://contentcraft648.gumroad.com/l/byvwg
+   - Ask me whether it is OK to delete the test set (test-set)
+
+Do not change or create anything beyond the installation and the test. Do not touch any of my other files.
